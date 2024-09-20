@@ -1,0 +1,233 @@
+:root{
+    --clr--primary--100: hsl(100, 100%, 100%);
+
+    --clr--neutral--200: hsl(235, 18%, 26%);
+    --clr--neutral--100: hsl(231, 7%, 60%);
+
+    --clr--secondary--100: hsl(4, 100%, 67%);
+
+    --clr--dark--100: hsl(234, 29%, 20%);
+
+    --fw-regular: 400;
+    --fw--bold: 700;
+}
+
+@font-face{
+    font-family: myFont;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+
+img, video, svg, canvas, picture{
+    display: block;
+    max-width: 100%;
+}
+
+
+p, h1, h2, h3, h4, h5, h6{
+    line-height: 1.5;
+}
+
+
+
+body{
+    font-family: myFont;
+    background-color: var(--clr--neutral--200);
+    font-size: .85rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-weight: var(--fw-regular);
+}
+
+.card{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr--primary--100);
+    width: 700px;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+}
+
+/* .left{
+    width: 60%;
+} */
+
+.left h1{
+    font-size: 2rem;
+    font-weight: var(--fw--bold);
+    color: var(--clr--dark--100);
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+ul div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+ul div img{
+    width: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 20px;
+}
+
+form > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+label{
+    font-weight: var(--fw--bold);
+    color: var(--clr--dark--100);
+}
+
+.error_message{
+    color: hsl(0, 94%, 70%);
+    font-weight: var(--fw--bold);
+}
+
+.span{
+    display: none;
+}
+
+input{
+    padding: 1rem .5rem;
+    border: 1px solid var(--clr--neutral--100);
+    outline: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    color: var(--clr--neutral--100);
+}
+
+.error{
+    background-color: hsl(0, 100%, 95%);
+    color: hsl(0, 94%, 70%);
+    border: 1px solid hsl(0, 16%, 46%);;
+}
+
+
+button{
+    margin-top: 20px;
+    padding: .75rem 2rem;
+    border: none;
+    outline: none;
+    color: var(--clr--primary--100);
+    background-color: var(--clr--dark--100);
+    border-radius: 5px;
+    font-weight: var(--fw--bold);
+}
+
+input:hover{
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--clr--secondary--100);
+    cursor: pointer;
+    box-shadow: 2px 4px 15px var(--clr--secondary--100);
+    transition: all .3s ease;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+.card-2{
+    background-color: var(--clr--primary--100);
+    width: 350px;
+    padding: 2rem;
+    border-radius: 25px;
+    font-weight: var(--fw-regular);
+}
+
+.card-2 img{
+    width: 50px;
+}
+
+.card-2 h1{
+    font-size: 2.5rem;
+    line-height: 1;
+    color: var(--clr--dark--100);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card-2 p span{
+    color: var(--clr--dark--100);
+    font-weight: var(--fw--bold);
+}
+
+.card-2 button{
+    width: 100%;
+}
+
+
+@media (max-width: 700px){
+    .card{
+        flex-direction: column-reverse;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0px;
+    }
+
+    .right img{
+        width: 100%;
+        content: url(./assets/images/illustration-sign-up-mobile.svg);
+        
+    }
+
+    .left{
+        padding: 0 .5rem 1rem 1rem;
+    }
+
+    .card-2{
+        min-height: 100vh;
+        border-radius: 0;
+    }
+
+    .card-2 img{
+        margin-top: 100px;
+    }
+
+    .card-2 button{
+        margin-top: 220px;
+    }
+}
+
+
+
+
+
